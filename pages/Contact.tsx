@@ -13,7 +13,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-  const response = await fetch("https://formsubmit.co/ajax/KEY", {
+  const response = await fetch("https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
