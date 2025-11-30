@@ -4,39 +4,43 @@ import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormStatus('submitting');
-    
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setFormStatus('submitting');
 
-    try {
-const response = await fetch("https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  },
-  body: JSON.stringify({
-    ...data,
-    _subject: "New Inquiry from Lone Dog Website!",
-    _captcha: "false"
-  })
-});
-      
-      if (response.ok) {
-        setFormStatus('success');
-        form.reset();
-      } else {
-        setFormStatus('error');
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          _subject: "New Inquiry from Lone Dog Website!",
+          _captcha: "false"
+        }),
       }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setFormStatus('error');
-    }
-  };
+    );
+
+    if (!response.ok) throw new Error("Network response was not OK");
+
+    const result = await response.json();
+    console.log("FormSubmit response:", result);
+
+    setFormStatus("success");
+    form.reset();
+  } catch (error) {
+    console.error("FormSubmit error:", error);
+    setFormStatus("error");
+  }
+};
 
   return (
     <div className="bg-white py-20">
