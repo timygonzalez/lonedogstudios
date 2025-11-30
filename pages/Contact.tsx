@@ -116,7 +116,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   <input type="hidden" name="_origin" value="https://lonedogstudios.com" />
                 
                 {/* Honey Pot */}
-               <input type="text" name="_honey" style="display:none;" >
+               <input type="text" name="_honey" style="display:none;" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
