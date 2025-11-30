@@ -1,4 +1,4 @@
 export default defineConfig({
-  base: '/lonedogstudios/',
+  base: '/lonedogstudios/'
   plugins: [react()],
 });
