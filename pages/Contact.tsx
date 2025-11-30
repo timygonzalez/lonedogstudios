@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7", {
+      const response = await fetch("https://formsubmit.co/b32b482cf51c80d44cb4f2766605d6e7", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
