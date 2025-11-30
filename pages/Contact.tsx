@@ -13,20 +13,33 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch(
-      "https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          _subject: "New Inquiry from Lone Dog Website!",
-          _captcha: "false"
-        }),
-      }
+  const response = await fetch("https://formsubmit.co/ajax/b32b482cf51c80d44cb4f2766605d6e7", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      ...data,
+      _subject: "New Inquiry from Lone Dog Website!",
+      _captcha: "false"
+    })
+  });
+
+  console.log("STATUS:", response.status);
+  console.log("RAW RESPONSE:", await response.clone().text());
+
+  if (!response.ok) throw new Error("Network response was not ok.");
+
+  const result = await response.json();
+  console.log("JSON:", result);
+
+  setFormStatus("success");
+  form.reset();
+} catch (err) {
+  console.error("FormSubmit failed:", err);
+  setFormStatus("error");
+}
     );
 
     if (!response.ok) throw new Error("Network response was not OK");
