@@ -40,7 +40,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   console.error("FormSubmit failed:", err);
   setFormStatus("error");
 }
-    );
+    ;
 
     if (!response.ok) throw new Error("Network response was not OK");
 
