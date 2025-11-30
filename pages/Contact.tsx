@@ -113,6 +113,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
+  <input type="hidden" name="_subject" value="New Inquiry from Lone Dog Website!" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+                
                 {/* Honey Pot */}
                 <input type="text" name="_honey" style={{ display: 'none' }} />
 
