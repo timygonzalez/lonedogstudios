@@ -118,7 +118,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   <input type="hidden" name="_template" value="table" />
                 
                 {/* Honey Pot */}
-                <input type="text" name="_honey" style={{ display: 'none' }} />
+                <input type="text" name="_honeypot" style={{ display: 'none' }} autoComplete="off" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
