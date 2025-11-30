@@ -12,7 +12,7 @@ const NavLink: React.FC<{ to: string; children: React.ReactNode; onClick?: () =>
       to={to}
       onClick={onClick}
       className={`text-sm font-medium transition-colors duration-200 ${
-        isActive ? 'text-brand-blue' : 'text-slate-600 hover:text-brand-navy'
+        isActive ? 'text-brand-blue' : 'text-slate-600 hover:text-slate-900'
       }`}
     >
       {children}
@@ -41,7 +41,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <NavLink to="/pricing">Pricing</NavLink>
               <Link 
                 to="/contact" 
-                className="bg-brand-blue text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm hover:shadow-md"
+                className="bg-brand-blue text-white px-5 py-2.5 rounded-full text-sm font-medium hover:brightness-110 transition-all shadow-sm hover:shadow-md"
               >
                 Contact Us
               </Link>
@@ -60,7 +60,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
 
         {/* Gradient Line */}
-        <div className="h-1 w-full bg-gradient-to-r from-brand-blue to-brand-green"></div>
+        <div className="h-1 w-full bg-gradient-brand"></div>
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
@@ -89,7 +89,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </Link>
               <Link 
                 to="/contact" 
-                className="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-brand-blue text-white hover:bg-blue-600"
+                className="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-brand-blue text-white hover:brightness-110"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
@@ -117,7 +117,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
             
             <div>
-              <h3 className="text-lg font-bold text-brand-navy mb-4">Studio</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Studio</h3>
               <ul className="space-y-3 text-sm text-slate-500">
                 <li><Link to="/about" className="hover:text-brand-blue transition-colors">Our Story</Link></li>
                 <li><Link to="/pricing" className="hover:text-brand-blue transition-colors">Services & Pricing</Link></li>
@@ -126,7 +126,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-brand-navy mb-4">Connect</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-4">Connect</h3>
               <ul className="space-y-3 text-sm text-slate-500">
                 <li className="flex items-center gap-2">
                   <Mail size={16} />

@@ -7,7 +7,7 @@ const About: React.FC = () => {
       {/* Header */}
       <div className="bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">The Studio Story</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">The Studio Story</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
             Small, independent, and fiercely dedicated to quality. We build the digital tools entrepreneurs need to succeed.
           </p>
@@ -18,7 +18,7 @@ const About: React.FC = () => {
         {/* Main Content Split */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <div>
-            <h2 className="text-3xl font-bold text-brand-navy mb-6">Why "Lone Dog"?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why "Lone Dog"?</h2>
             <div className="prose prose-lg text-slate-600">
               <p className="mb-4">
                 In a world of massive agencies and impersonal website builders, we chose to stand apart. The name "Lone Dog Studios" represents independence, loyalty to our craft, and the relentless pursuit of the goal.
@@ -43,7 +43,7 @@ const About: React.FC = () => {
 
         {/* Values */}
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-brand-navy text-center mb-12">Our Core Values</h2>
+          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
@@ -78,7 +78,7 @@ const About: React.FC = () => {
 
         {/* Process - Light Theme Update */}
         <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-16">
-          <h2 className="text-3xl font-bold mb-12 text-center text-brand-navy">How We Work</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-slate-900">How We Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="relative">
               <span className="text-6xl font-black text-slate-200 absolute -top-8 -left-4 select-none">01</span>

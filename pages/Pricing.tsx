@@ -53,7 +53,7 @@ const Pricing: React.FC = () => {
     <div className="bg-slate-50 min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold text-brand-navy mb-4">Simple, Transparent Pricing</h1>
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">Simple, Transparent Pricing</h1>
           <p className="text-xl text-slate-600">
             No hidden monthly fees. No confusing jargon. Just a one-time investment in your business's future.
           </p>
@@ -70,13 +70,13 @@ const Pricing: React.FC = () => {
               }`}
             >
               {tier.recommended && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-brand-blue to-brand-green text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-brand text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">
                   Most Popular
                 </div>
               )}
               
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-brand-navy">{tier.name}</h3>
+                <h3 className="text-2xl font-bold text-slate-900">{tier.name}</h3>
                 <div className="mt-4 flex items-baseline">
                   <span className="text-4xl font-extrabold text-slate-900">{tier.price}</span>
                   {tier.name !== "Premium UX" && <span className="ml-1 text-slate-500">/project</span>}
@@ -101,7 +101,7 @@ const Pricing: React.FC = () => {
                 to="/contact"
                 className={`w-full block text-center py-3 px-6 rounded-lg font-bold transition-all ${
                   tier.recommended
-                    ? 'bg-brand-blue text-white hover:bg-blue-600 shadow-md'
+                    ? 'bg-brand-blue text-white hover:brightness-110 shadow-md'
                     : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
                 }`}
               >
@@ -112,11 +112,11 @@ const Pricing: React.FC = () => {
         </div>
 
         <div className="mt-20 text-center bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
-          <h3 className="text-2xl font-bold text-brand-navy mb-4">Need something specific?</h3>
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">Need something specific?</h3>
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
             We understand that every business is unique. If these packages don't quite fit your needs, let's chat about a custom solution.
           </p>
-          <Link to="/contact" className="text-brand-blue font-bold hover:text-brand-navy underline decoration-2 underline-offset-4">
+          <Link to="/contact" className="text-brand-blue font-bold hover:text-slate-900 underline decoration-2 underline-offset-4">
             Request a Custom Quote
           </Link>
         </div>

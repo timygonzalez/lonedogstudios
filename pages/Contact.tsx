@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
           
           {/* Contact Info */}
           <div>
-            <h1 className="text-4xl font-bold text-brand-navy mb-6">Let's get your project started.</h1>
+            <h1 className="text-4xl font-bold text-slate-900 mb-6">Let's get your project started.</h1>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">
               Ready to launch? Have questions about our pricing? Fill out the form, and we'll get back to you within 24 hours. No sales pressure, just a conversation about your goals.
             </p>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
-            <h2 className="text-2xl font-bold text-brand-navy mb-6">Send a Message</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Send a Message</h2>
             
             {formStatus === 'success' ? (
               <div className="flex flex-col items-center justify-center py-12 text-center bg-green-50 rounded-xl border border-green-100">
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={formStatus === 'submitting'}
-                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-lg text-base font-bold text-white bg-brand-blue hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-all shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full flex justify-center items-center py-4 px-6 border border-transparent rounded-lg text-base font-bold text-white bg-brand-blue hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-all shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
                   {formStatus !== 'submitting' && <Send className="ml-2 h-5 w-5" />}

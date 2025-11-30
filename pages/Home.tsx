@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
               Websites for <br/>
               {/* Gradient Text Effect */}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green">Entrepreneurs.</span>
+              <span className="text-gradient-brand">Entrepreneurs.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed font-medium">
               Stop struggling with DIY builders. We design and build professional, high-performing websites that help you launch fast and grow your business.
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link 
                 to="/pricing" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-brand-blue hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-brand-blue hover:brightness-110 transition-all shadow-lg hover:shadow-blue-500/30"
               >
                 Build My Website
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -52,11 +52,11 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-brand-blue font-semibold tracking-wide uppercase text-sm mb-2">Why Choose Us</h2>
-            <h3 className="text-3xl font-bold text-brand-navy">Built for speed, designed for impact.</h3>
+            <h3 className="text-3xl font-bold text-slate-900">Built for speed, designed for impact.</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="p-8 bg-brand-light rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+            <div className="p-8 bg-sky-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center mb-6">
                 <Zap size={24} />
               </div>
@@ -66,8 +66,8 @@ const Home: React.FC = () => {
               </p>
             </div>
             
-            <div className="p-8 bg-brand-light rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 text-brand-green rounded-lg flex items-center justify-center mb-6">
+            <div className="p-8 bg-sky-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-lime-100 text-brand-green rounded-lg flex items-center justify-center mb-6">
                 <Smartphone size={24} />
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-3">Mobile-First Design</h4>
@@ -76,7 +76,7 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-8 bg-brand-light rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
+            <div className="p-8 bg-sky-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 text-brand-blue rounded-lg flex items-center justify-center mb-6">
                 <Layout size={24} />
               </div>
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 Tailored solutions for every stage of business.
               </h2>
               <p className="text-lg text-slate-600 mb-8">
@@ -152,7 +152,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Strip - Gradient Background */}
-      <section className="py-20 bg-gradient-to-r from-brand-blue to-brand-green">
+      <section className="py-20 bg-gradient-brand">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Let's build your website together.</h2>
           <p className="text-white/90 text-lg mb-10 font-medium">
