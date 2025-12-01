@@ -68,10 +68,10 @@ const Contact: React.FC = () => {
                     Email Us
                   </h3>
                   <a
-                    href="mailto:timygonzalez@gmail.com"
+                    href="mailto: info@lonedogstudios.com"
                     className="text-brand-blue hover:underline"
                   >
-                    timygonzalez@gmail.com
+                    info@lonedogstudios.com
                   </a>
                 </div>
               </div>
